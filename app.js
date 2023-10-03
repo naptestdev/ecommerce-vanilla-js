@@ -7,9 +7,10 @@ for (let product of products) {
     <div class="container">
       <div class="info">
         <h5>${product.title}</h5> 
-        <h6>Price: $${product.price}</h6>
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+        <h6>$${product.price}</h6>
       </div>
-      <button onclick="handleAddToCartClicked(${product.id})">Add to cart</button>
+      <button onclick="handleAddToCartClicked(${product.id})"><i class="fa-solid fa-plus"></i></button>
     </div>
   </div>
   `;
