@@ -1,15 +1,15 @@
 if (localStorage.getItem("currentUser")) {
   document.querySelector(".icons").innerHTML += /*html*/ `
     <a href="/cart/cart.html">
-      <i class="fa-solid fa-cart-shopping"></i>
+      <i class='bx bx-cart'></i>
       <span id="cart-count"></span>
     </a>
     <a href="javascript:;" onclick="logout()">
-      <i class="fa-solid fa-right-from-bracket"></i>
+      <i class='bx bx-log-out' ></i>
     </a>
-    <img src="${`https://avatars.dicebear.com/api/initials/${
+    <img src="${`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
       JSON.parse(localStorage.getItem("currentUser")).username
-    }.svg`}" />
+    )}`}" />
   `;
 } else {
   document.querySelector(".icons").innerHTML += /*html*/ `

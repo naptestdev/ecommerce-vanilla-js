@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping Page</title>
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oregano&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <div class="navbar">
@@ -21,21 +31,82 @@
           <h1>Mind<span>X</span> Store</h1>
         </a>
         <div class="search">
-          <input type="text" placeholder="Search..." />
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search for products..." />
+          <span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
         </div>
         <div class="icons"></div>
       </div>
     </div>
 
+    <div class="banner">
+      <div>
+        <div>
+          <p style="font-size: 20px">Starting at $274.00</p>
+          <h2 style="font-size: 50px">The best tablet</h2>
+          <h2 style="font-size: 50px">Collection 2023</h2>
+          <p
+            style="
+              font-family: 'Oregano', cursive;
+              font-size: 30px;
+              margin-top: 10px;
+            "
+          >
+            Exclusive offer
+            <span style="color: #f8d65a; font-family: 'Oregano', cursive"
+              >-35%</span
+            >
+            off this week
+          </p>
+          <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <img src="./assets/slider-img-1.png" alt="" />
+      </div>
+      <img src="./assets/slider-shape-1.png" alt="" />
+    </div>
+
     <div class="main-content">
-      <h3><i class="fa-solid fa-bolt"></i> Flash Deals</h3>
+      <div id="categories"></div>
+
+      <div class="features">
+        <div>
+          <i class="bx bxs-package"></i>
+          <div>
+            <strong>Free Delivery</strong>
+            <p>Orders from all item</p>
+          </div>
+        </div>
+        <div>
+          <i class="fa-solid fa-dollar-sign"></i>
+          <div>
+            <strong>Return & Refund</strong>
+            <p>Money back guarantee</p>
+          </div>
+        </div>
+        <div>
+          <i class="fa-solid fa-percent"></i>
+          <div>
+            <strong>Member Discount</strong>
+            <p>One very order over $140</p>
+          </div>
+        </div>
+        <div>
+          <i class="fa-solid fa-headphones"></i>
+          <div>
+            <strong>Support 24/7</strong>
+            <p>Contact us 24 hours a day</p>
+          </div>
+        </div>
+      </div>
+
+      <h3><i class="fa-solid fa-bolt"></i> Trending Products</h3>
       <div id="products"></div>
     </div>
 
-    <script src="./navbar.js"></script>
-    <script src="./data.js"></script>
-    <script src="./cart-mutate.js"></script>
-    <script src="./app.js"></script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/cart-mutate.js"></script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
