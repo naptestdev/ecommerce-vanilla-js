@@ -236,7 +236,7 @@ a {
 
 #products .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.075);
 }
 
 #products .card .image-container {
@@ -295,28 +295,9 @@ a {
   font-size: 20px;
 }
 
-#products .card .container button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: white;
-  color: #de5a74;
-  border: 1px solid #d7d7d7;
-  cursor: pointer;
-  transition: 0.3s;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-#products .card .container button:hover {
-  background: #de5a74;
-  color: white;
-  border: 1px solid transparent;
+#products .card .container p {
+  font-size: 13px;
+  color: rgb(91, 91, 91);
 }
 
 #products .card h6 span:first-child {

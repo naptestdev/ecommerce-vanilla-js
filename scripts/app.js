@@ -17,31 +17,20 @@ for (let category of categories) {
 
 for (let product of products) {
   let card = /*html*/ `
-  <div class="card">
+  <a href="./product/product-detail.html?id=${product.id}" class="card">
     <div class="image-container">
       <img src="./assets/products/${product.image}" /> 
     </div> 
     <div class="container">
+      <p>${
+        categories.find((category) => product.category === category.id).name
+      }</p>
       <h5>${product.name}</h5> 
       <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
       <h6><span>${product.oldPrice}</span> <span>${product.newPrice}</span></h6>
     </div>
-  </div>
+  </a>
   `;
 
   document.getElementById("products").innerHTML += card;
 }
-
-const handleAddToCartClicked = (productId) => {
-  if (!localStorage.getItem("currentUser")) {
-    alert("Please log in");
-  } else {
-    addToCart(productId);
-  }
-};
-
-const logout = () => {
-  localStorage.removeItem("currentUser");
-  localStorage.removeItem("cart");
-  location.reload();
-};

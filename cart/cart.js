@@ -1,6 +1,6 @@
 // if not logged in, redirect to login page
 if (!localStorage.getItem("currentUser")) {
-  location.href = "/login/login.html";
+  location.href = "../login/login.html";
 }
 
 const displayCart = () => {
@@ -26,21 +26,25 @@ const displayCart = () => {
             <tr>
               <td>
                 <div class="product-cell">
-                  <img src="${product.image}" alt="" />
-                  <p>${product.title}</p>
+                  <img src="../assets/products/${product.image}" alt="" />
+                  <p>${product.name}</p>
                 </div>
               </td>
               <td class="quantity-cell">
-                <button onclick="removeFromCart(${product.id});displayCart()">
+                <button onclick="removeFromCart('${product.id}');displayCart()">
                   -
                 </button>
                 <span>${product.quantity}</span>
-                <button onclick="addToCart(${product.id});displayCart()">
+                <button onclick="addToCart('${product.id}');displayCart()">
                   +
                 </button>
               </td>
               <td>$${
-                Math.round(product.price * product.quantity * 100) / 100
+                Math.round(
+                  Number(product.newPrice.trim().slice(1)) *
+                    product.quantity *
+                    100
+                ) / 100
               }</td>
             </tr>
           `
@@ -51,7 +55,8 @@ const displayCart = () => {
         <h2>Total: $${
           Math.round(
             cart.reduce((acc, product) => {
-              acc += product.price * product.quantity;
+              acc +=
+                Number(product.newPrice.trim().slice(1)) * product.quantity;
               return acc;
             }, 0) * 100
           ) / 100

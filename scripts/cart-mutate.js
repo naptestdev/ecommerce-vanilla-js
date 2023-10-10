@@ -1,4 +1,4 @@
-const addToCart = (productId) => {
+const addToCart = (productId, quantity = 1) => {
   const cart = localStorage.getItem("cart")
     ? JSON.parse(localStorage.getItem("cart"))
     : [];
@@ -6,11 +6,11 @@ const addToCart = (productId) => {
   const existingItem = cart.find((item) => item.id === productId);
 
   if (existingItem) {
-    existingItem.quantity++;
+    existingItem.quantity += quantity;
   } else {
     cart.push({
       ...products.find((product) => product.id === productId),
-      quantity: 1,
+      quantity,
     });
   }
 

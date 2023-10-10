@@ -13,7 +13,7 @@ if (localStorage.getItem("currentUser")) {
   `;
 } else {
   document.querySelector(".icons").innerHTML += /*html*/ `
-    <a href="./login/login.html">
+    <a href="./register/register.html">
       <i class="fa-solid fa-right-to-bracket"></i>
     </a>
   `;
@@ -27,3 +27,9 @@ const updateCartCount = () => {
 };
 
 updateCartCount();
+
+const logout = () => {
+  localStorage.removeItem("currentUser");
+  localStorage.removeItem("cart");
+  location.reload();
+};

@@ -138,16 +138,6 @@ const products = [
     category: "smart-watch",
   },
   {
-    id: "641e887d05f9ee1717e134c0",
-    name: "Sony Smart Watch",
-    image: "watch-5.png",
-    oldPrice: "$200",
-    newPrice: " $190.00",
-    description:
-      "Starlight Aluminum Case with Braided Solo Loop The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Braided Solo Loop is made from recycled yarn and silicone threads for an ultracomfortable, stretchable design with no clasps or buckles.",
-    category: "smart-watch",
-  },
-  {
     id: "641e887d05f9ee1717e134cb",
     name: "Lenovo Wireless Bluetooth",
     image: "blutooth-4.png",
