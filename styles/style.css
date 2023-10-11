@@ -85,6 +85,52 @@ a {
   align-items: center;
 }
 
+.avatar-action {
+  position: relative;
+  cursor: pointer;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: 0.3s;
+  z-index: 2;
+  right: 0;
+  box-shadow: 0 0 10px gray;
+}
+
+.popup button {
+  cursor: pointer;
+  width: 100%;
+  text-wrap: nowrap;
+  border: none;
+  outline: none;
+  background: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  transition: 0.3s;
+}
+
+.popup button:hover {
+  background: #e8e8e8;
+}
+
+.popup button i {
+  font-size: 20px !important;
+}
+.popup button {
+  font-size: 20px !important;
+}
+
+.avatar-action:focus-within .popup {
+  opacity: 1;
+  visibility: visible;
+}
+
 .banner {
   background: #115061;
   position: relative;
@@ -310,4 +356,53 @@ a {
   font-size: 18px;
   color: var(--primary);
   font-weight: 600;
+}
+
+footer {
+  background: #f5f5f5;
+  padding: 80px 0;
+  margin-top: 50px;
+}
+
+footer > div {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer img {
+  height: 30px;
+  width: auto;
+}
+
+footer h6 {
+  font-size: large;
+  margin-bottom: 20px;
+}
+
+footer a {
+  display: block;
+  color: var(--gray);
+}
+
+footer h1 {
+  font-weight: normal;
+}
+
+footer h1 span {
+  color: #c00307;
+}
+
+@media screen and (max-width: 896px) {
+  footer {
+    padding: 30px 0;
+  }
+
+  footer > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }

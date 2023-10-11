@@ -17,8 +17,9 @@ const displayCart = () => {
       <table>
         <tr>
           <th>Product</th>
+          <th>Price</th>
           <th>Quantity</th>
-          <th>Subtotal</th>
+          <th>Total</th>
         </tr>
         ${cart
           .map(
@@ -30,6 +31,7 @@ const displayCart = () => {
                   <p>${product.name}</p>
                 </div>
               </td>
+              <td>${product.newPrice}</td>
               <td class="quantity-cell">
                 <button onclick="removeFromCart('${product.id}');displayCart()">
                   -
@@ -51,16 +53,30 @@ const displayCart = () => {
           )
           .join("")}
       </table>
-      <div class="total">
-        <h2>Total: $${
-          Math.round(
-            cart.reduce((acc, product) => {
-              acc +=
-                Number(product.newPrice.trim().slice(1)) * product.quantity;
-              return acc;
-            }, 0) * 100
-          ) / 100
-        }</h2>
+
+      <div class="checkout">
+        <div class="total">
+          <h2>Grand total: $${
+            Math.round(
+              cart.reduce((acc, product) => {
+                acc +=
+                  Number(product.newPrice.trim().slice(1)) * product.quantity;
+                return acc;
+              }, 0) * 100
+            ) / 100
+          }</h2>
+        </div>
+        <p>Card information</p>
+        <div class="credit">
+          <input placeholder="1234 1234 1234 1234" />
+          <img src="../assets/payment-option.png" />
+        </div>
+        <div class="date-and-cvc">
+          <input placeholder="MM / YY" />
+          <input placeholder="CVC" />
+        </div>
+
+        <button onclick="alert('Purchased successfully');localStorage.removeItem('cart');displayCart()">Checkout</button>
       </div>
     `;
   }

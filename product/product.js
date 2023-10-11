@@ -82,6 +82,7 @@ else {
   });
   document.querySelector(".add-to-cart-btn").addEventListener("click", () => {
     handleAddToCart(productId, false);
+    alert("Add to cart successfully");
   });
   document.querySelector(".buy-now-btn").addEventListener("click", () => {
     handleAddToCart(productId, true);
