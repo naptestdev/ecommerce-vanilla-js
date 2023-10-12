@@ -9,7 +9,7 @@ const handleAddToCart = (productId, doRedirect) => {
     alert("Please login to add to cart");
   } else {
     addToCart(productId, quantity);
-    if (doRedirect) location.href = "../cart/cart.html";
+    if (doRedirect) location.href = "./cart.html";
   }
 };
 
@@ -20,7 +20,7 @@ else {
     product.description;
 
   document.querySelector(".main-product").innerHTML = /*html*/ `
-    <img src="../assets/products/${product.image}" />
+    <img src="./assets/products/${product.image}" />
     <div class="product-detail">
       <p>${
         categories.find((category) => product.category === category.id).name
@@ -67,7 +67,7 @@ else {
         <div>
           <p>Guaranteed safe<br />
           & secure checkout</p>
-          <img style="max-width: 236px" src="../assets/payment-option.png" />
+          <img style="max-width: 236px" src="./assets/payment-option.png" />
         </div>
       </div>
     </div>

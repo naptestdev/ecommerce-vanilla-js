@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping Page</title>
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="./cart.css" />
+    <title>Product Detail Page</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -18,24 +16,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oregano&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/product.css" />
   </head>
   <body>
     <div class="navbar">
       <div>
-        <a href="../index.html">
+        <a href="./index.html">
           <h1>Mind<span>X</span> Store</h1>
         </a>
-        <div class="search">
-          <input type="text" placeholder="Search for products..." />
-          <span>
+        <form class="search" method="get" action="./search.html">
+          <input type="text" placeholder="Search for products.." name="q" />
+          <button>
             <i class="fa-solid fa-magnifying-glass"></i>
-          </span>
-        </div>
+          </button>
+        </form>
         <div class="icons"></div>
       </div>
     </div>
 
-    <div id="cart-container"></div>
+    <div class="main-product"></div>
+
+    <div class="line-indicator"></div>
+
+    <p class="product-description"></p>
 
     <footer>
       <div>
@@ -64,9 +74,9 @@
       </div>
     </footer>
 
-    <script src="../scripts/data.js"></script>
-    <script src="../scripts/navbar.js"></script>
-    <script src="../scripts/cart-mutate.js"></script>
-    <script src="./cart.js"></script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/cart-mutate.js"></script>
+    <script src="./scripts/product.js"></script>
   </body>
 </html>

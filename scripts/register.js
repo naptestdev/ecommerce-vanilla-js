@@ -48,6 +48,6 @@ form.addEventListener("submit", (e) => {
         ])
       );
     }
-    location.href = "../login/login.html";
+    location.href = "./login/login.html";
   }
 });

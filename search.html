@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping Page</title>
+    <title>Search</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -40,67 +40,8 @@
       </div>
     </div>
 
-    <div class="banner">
-      <div>
-        <div>
-          <p style="font-size: 20px">Starting at $274.00</p>
-          <h2 style="font-size: 50px">The best tablet</h2>
-          <h2 style="font-size: 50px">Collection 2023</h2>
-          <p
-            style="
-              font-family: 'Oregano', cursive;
-              font-size: 30px;
-              margin-top: 10px;
-            "
-          >
-            Exclusive offer
-            <span style="color: #f8d65a; font-family: 'Oregano', cursive"
-              >-35%</span
-            >
-            off this week
-          </p>
-          <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-        <img src="./assets/slider-img-1.png" alt="" />
-      </div>
-      <img src="./assets/slider-shape-1.png" alt="" />
-    </div>
-
     <div class="main-content">
-      <div id="categories"></div>
-
-      <div class="features">
-        <div>
-          <i class="bx bxs-package"></i>
-          <div>
-            <strong>Free Delivery</strong>
-            <p>Orders from all item</p>
-          </div>
-        </div>
-        <div>
-          <i class="fa-solid fa-dollar-sign"></i>
-          <div>
-            <strong>Return & Refund</strong>
-            <p>Money back guarantee</p>
-          </div>
-        </div>
-        <div>
-          <i class="fa-solid fa-percent"></i>
-          <div>
-            <strong>Member Discount</strong>
-            <p>One very order over $140</p>
-          </div>
-        </div>
-        <div>
-          <i class="fa-solid fa-headphones"></i>
-          <div>
-            <strong>Support 24/7</strong>
-            <p>Contact us 24 hours a day</p>
-          </div>
-        </div>
-      </div>
-
-      <h3><i class="fa-solid fa-bolt"></i> Trending Products</h3>
+      <h3>Search result for "<span id="search-term"></span>"</h3>
       <div id="products"></div>
     </div>
 
@@ -134,6 +75,6 @@
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/data.js"></script>
     <script src="./scripts/cart-mutate.js"></script>
-    <script src="./scripts/app.js"></script>
+    <script src="./scripts/search.js"></script>
   </body>
 </html>

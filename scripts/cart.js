@@ -1,6 +1,6 @@
 // if not logged in, redirect to login page
 if (!localStorage.getItem("currentUser")) {
-  location.href = "../login/login.html";
+  location.href = "./login/login.html";
 }
 
 const displayCart = () => {
@@ -27,7 +27,7 @@ const displayCart = () => {
             <tr>
               <td>
                 <div class="product-cell">
-                  <img src="../assets/products/${product.image}" alt="" />
+                  <img src="./assets/products/${product.image}" alt="" />
                   <p>${product.name}</p>
                 </div>
               </td>
@@ -69,7 +69,7 @@ const displayCart = () => {
         <p>Card information</p>
         <div class="credit">
           <input placeholder="1234 1234 1234 1234" />
-          <img src="../assets/payment-option.png" />
+          <img src="./assets/payment-option.png" />
         </div>
         <div class="date-and-cvc">
           <input placeholder="MM / YY" />

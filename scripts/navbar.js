@@ -1,6 +1,6 @@
 if (localStorage.getItem("currentUser")) {
   document.querySelector(".icons").innerHTML += /*html*/ `
-    <a href="/cart/cart.html">
+    <a href="./cart.html">
       <i class='bx bx-cart'></i>
       <span id="cart-count"></span>
     </a>
@@ -9,7 +9,7 @@ if (localStorage.getItem("currentUser")) {
         JSON.parse(localStorage.getItem("currentUser")).username
       )}`}" />
       <div class="popup">
-        <button onclick="location.href = './profile/profile.html'">
+        <button onclick="location.href = './profile.html'">
           <i class="fa-solid fa-user"></i>
           <span> Profile</span>
         </button>
@@ -22,7 +22,7 @@ if (localStorage.getItem("currentUser")) {
   `;
 } else {
   document.querySelector(".icons").innerHTML += /*html*/ `
-    <a href="./register/register.html">
+    <a href="./register.html">
       <i class="fa-solid fa-right-to-bracket"></i>
     </a>
   `;
