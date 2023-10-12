@@ -1,25 +1,18 @@
-for (let category of categories) {
-  let card = /*html*/ `
-  <div class="category-card">
-    <a href="./category.html?categoryId=${encodeURIComponent(
-      category.id
-    )}" class="category-image-container">
-      <img src="./assets/categories/${category.image}" />
-    </a>
-    <div class="category-container">
-      <a href=""><h3>${category.name}</h3></a> 
-      <a href=""><p>${
-        products.filter((product) => product.category === category.id).length
-      } Products</p></a> 
+const categoryId = new URLSearchParams(new URL(location.href).search).get(
+  "categoryId"
+);
 
-    </div>
-  </div>
-  `;
+const category = categories.find((item) => item.id === categoryId);
 
-  document.getElementById("categories").innerHTML += card;
-}
+if (!category) location.href = "./index.html";
 
-for (let product of products) {
+document.querySelector("#category").innerText = category.name;
+
+const filtered = products.filter((product) => {
+  return product.category === categoryId;
+});
+
+for (let product of filtered) {
   let card = /*html*/ `
   <a href="./product-detail.html?id=${product.id}" class="card">
     <div class="image-container">
