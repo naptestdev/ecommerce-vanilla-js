@@ -73,6 +73,31 @@ else {
     </div>
   `;
 
+  for (let relatedProduct of products.filter(
+    (item) => item.category === product.category && item.id !== product.id
+  )) {
+    let card = /*html*/ `
+    <a href="./product.html?id=${relatedProduct.id}" class="card">
+      <div class="image-container">
+        <img src="./assets/products/${relatedProduct.image}" /> 
+      </div> 
+      <div class="container">
+        <p>${
+          categories.find((category) => relatedProduct.category === category.id)
+            .name
+        }</p>
+        <h5>${relatedProduct.name}</h5> 
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+        <h6><span>${relatedProduct.oldPrice}</span> <span>${
+      relatedProduct.newPrice
+    }</span></h6>
+      </div>
+    </a>
+    `;
+
+    document.getElementById("products").innerHTML += card;
+  }
+
   document.querySelector("#minus-btn").addEventListener("click", () => {
     if (quantity > 1)
       document.querySelector("#quantity").innerText = --quantity;

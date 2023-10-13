@@ -9,7 +9,7 @@ const addToCart = (productId, quantity = 1) => {
     existingItem.quantity += quantity;
   } else {
     cart.push({
-      ..products.find((product) => product.id === productId),
+      ...products.find((product) => product.id === productId),
       quantity,
     });
   }

@@ -23,7 +23,7 @@ const filtered = products.filter(({ name }) => {
 
 for (let product of filtered) {
   let card = /*html*/ `
-  <a href="./product-detail.html?id=${product.id}" class="card">
+  <a href="./product.html?id=${product.id}" class="card">
     <div class="image-container">
       <img src="./assets/products/${product.image}" /> 
     </div> 

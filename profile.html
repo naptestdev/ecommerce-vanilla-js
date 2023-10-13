@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User profile</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oregano&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="./index.html">
+          <h1>Mind<span>X</span> Store</h1>
+        </a>
+        <form class="search" method="get" action="./search.html">
+          <input type="text" placeholder="Search for products.." name="q" />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="icons"></div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="sidebar">
+        <img id="profile-image" src="" alt="" />
+        <a href="#change-info-form">
+          <i class="fa-solid fa-user"></i>
+          <span> Acount Settings</span>
+        </a>
+        <a href="#change-password-form">
+          <i class="fa-solid fa-key"></i>
+          <span> Change Password</span>
+        </a>
+        <a href="./index.html" onclick="logout();return true">
+          <i class="bx bx-log-out"></i>
+          <span> Logout</span>
+        </a>
+      </div>
+      <div class="editor">
+        <form id="change-info-form">
+          <h2>Account Settings</h2>
+          <label for="email">Email address</label>
+          <input id="email" type="text" disabled />
+          <label for="username">Username</label>
+          <input id="username" type="text" placeholder="John Doe" required />
+          <button>Change</button>
+        </form>
+
+        <form id="change-password-form">
+          <h2>Change password</h2>
+
+          <label for="old-password">Old password</label>
+          <input id="old-password" type="password" required />
+          <label for="new-password">New password</label>
+          <input id="new-password" type="password" required />
+          <label for="repeat-password">Repeat new password</label>
+          <input id="repeat-password" type="password" required />
+          <button>Change</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <h1>Mind<span>X</span> Store</h1>
+        <div>
+          <h6>Company</h6>
+          <a href="">About</a>
+          <a href="">Contact</a>
+          <a href="">Our Staff</a>
+          <a href="">Advertise</a>
+        </div>
+        <div>
+          <h6>Tech News</h6>
+          <a href="">Technology</a>
+          <a href="">Gadget</a>
+          <a href="">Software</a>
+          <a href="">Games</a>
+        </div>
+        <div>
+          <h6>Legal</h6>
+          <a href="">Privacy Policy</a>
+          <a href="">Terms of Service</a>
+          <a href="">Extra Crunch Terms</a>
+          <a href="">Code of Conduct</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/profile.js"></script>
+  </body>
+</html>
