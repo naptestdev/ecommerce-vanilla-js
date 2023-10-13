@@ -1,5 +1,5 @@
 .main-product {
-  padding: 0 10px;
+  padding: 0 30px;
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -171,7 +171,7 @@
 }
 
 .product-description {
-  padding: 0 10px;
+  padding: 0 30px;
   max-width: 1100px;
   margin: 0 auto;
   font-size: 20px;
@@ -179,11 +179,25 @@
 }
 
 .related-products {
-  padding: 0 10px;
+  padding: 0 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .related-products h2 {
   font-size: 35px;
+}
+
+@media screen and (max-width: 896px) {
+  .main-product {
+    flex-direction: column;
+  }
+
+  .main-product img {
+    width: 100%;
+  }
+
+  .line-indicator {
+    margin: 30px 0;
+  }
 }

@@ -126,3 +126,9 @@ th {
   font-size: 18px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 896px) {
+  #cart-container {
+    flex-direction: column;
+  }
+}
