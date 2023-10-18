@@ -42,3 +42,24 @@ const logout = () => {
   localStorage.removeItem("cart");
   location.reload();
 };
+
+document.body.innerHTML += /*html*/ `
+  <button class="back-to-top">
+  <i class="fa-solid fa-angles-up"></i>
+  </button>
+`;
+
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 0)
+    document.querySelector(".back-to-top").classList.add("back-to-top-visible");
+  else
+    document
+      .querySelector(".back-to-top")
+      .classList.remove("back-to-top-visible");
+});
+
+document
+  .querySelector(".back-to-top")
+  .addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
