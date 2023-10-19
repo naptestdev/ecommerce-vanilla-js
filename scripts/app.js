@@ -17,6 +17,18 @@ for (let category of categories) {
   `;
 
   document.getElementById("categories").innerHTML += card;
+
+  let element = /*html*/ `
+<button>
+  <span>
+    <img src="./assets/categories/${category.image}" alt="" />
+    <span>${category.name}</span>
+  </span>
+  <i class="fa-solid fa-chevron-right"></i>
+</button>
+  `;
+
+  document.querySelector(".category-drops").innerHTML += element;
 }
 
 for (let product of products) {
@@ -24,6 +36,17 @@ for (let product of products) {
   <a href="./product.html?id=${product.id}" class="card">
     <div class="image-container">
       <img src="./assets/products/${product.image}" /> 
+      <div class="card-actions">
+        <button onclick="addToCart('${
+          product.id
+        }');" data-tooltip="Add to cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button onclick="location.href='./product.html?id=${
+          product.id
+        }'" data-tooltip="Quick view"><i class="fa-regular fa-eye"></i></button>
+        <button data-tooltip="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+      </div>
     </div> 
     <div class="container">
       <p>${

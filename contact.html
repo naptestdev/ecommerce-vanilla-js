@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Detail Page</title>
+    <title>Contact</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -16,15 +16,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oregano&family=Roboto:wght@400;700&family=Jost:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="stylesheet" href="./styles/product.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
   </head>
   <body>
     <div class="navbar">
@@ -42,19 +36,63 @@
       </div>
     </div>
 
-    <div class="main-product"></div>
+    <main>
+      <h1>Keep In Touch with Us</h1>
+      <p>Home • Contact</p>
 
-    <div class="line-indicator"></div>
+      <form class="container">
+        <h2>Send A Message</h2>
+        <div class="input-box">
+          <label for="name" class="input-title">Your Name</label>
+          <input type="text" placeholder="John Doe" name="name" />
+        </div>
+        <div class="input-box">
+          <label for="email" class="input-title">Your Email</label>
+          <input type="text" placeholder="johndoe@gmail.com" name="email" />
+        </div>
+        <div class="input-box">
+          <label for="subject" class="input-title">Subject</label>
+          <input type="text" placeholder="Write your subject" name="subject" />
+        </div>
+        <div class="input-box">
+          <label for="message" class="input-title">Your Message</label>
+          <textarea
+            type="text"
+            placeholder="Write your message here..."
+            name="message"
+          ></textarea>
+        </div>
+        <div>
+          <input type="checkbox" name="save" />
+          <label for="save"
+            >Save my name, email, and website in this browser for the next time
+            I comment.</label
+          >
+        </div>
+        <button>Send Message</button>
 
-    <p class="product-description"></p>
+        <div class="contact-arts">
+          <div>
+            <img src="./assets/contact-icon-1.png" alt="" />
+            <p>support@mindxstore.com</p>
+            <strong>+123 456 789</strong>
+          </div>
+          <div>
+            <img src="./assets/contact-icon-2.png" alt="" />
+            <p>Hanoi / HCM, VN</p>
+          </div>
+          <div>
+            <img src="./assets/contact-icon-3.png" alt="" />
+            <p>Find on social media</p>
+          </div>
+        </div>
+      </form>
 
-    <div class="line-indicator"></div>
-
-    <div class="related-products">
-      <h2>Related Products</h2>
-
-      <div id="products"></div>
-    </div>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=105.80034345388415%2C21.0063347016125%2C105.80224245786668%2C21.00857071358949&amp;layer=mapnik"
+        frameborder="0"
+      ></iframe>
+    </main>
 
     <footer>
       <div>
@@ -108,8 +146,5 @@
     </footer>
 
     <script src="./scripts/layout.js"></script>
-    <script src="./scripts/data.js"></script>
-    <script src="./scripts/cart-mutate.js"></script>
-    <script src="./scripts/product.js"></script>
   </body>
 </html>

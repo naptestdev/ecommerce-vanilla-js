@@ -1,8 +1,12 @@
 if (localStorage.getItem("currentUser")) {
   document.querySelector(".icons").innerHTML += /*html*/ `
-    <a href="./cart.html">
+    <a class="navbar-icon" href="./cart.html">
       <i class='bx bx-cart'></i>
-      <span id="cart-count"></span>
+      <span id="cart-count">0</span>
+    </a>
+    <a class="navbar-icon" href="./wishlist.html">
+      <i class='fa-regular fa-heart'></i>
+      <span id="wishlist-count">0</span>
     </a>
     <div tabindex="0" class="avatar-action">
       <img src="${`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
