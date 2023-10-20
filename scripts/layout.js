@@ -37,6 +37,10 @@ const updateCartCount = () => {
     let cart = JSON.parse(localStorage.getItem("cart"));
     document.getElementById("cart-count").innerText = cart.length;
   }
+  if (localStorage.getItem("wishlist")) {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist"));
+    document.getElementById("wishlist-count").innerText = wishlist.length;
+  }
 };
 
 updateCartCount();

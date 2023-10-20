@@ -57,7 +57,7 @@ const displayCart = () => {
                       </button>
                     </div>
                   </td>
-                  <td><button class="remove-from-cart"><i class="fa-solid fa-x"></i> Remove</button></td>
+                  <td><button onclick="removeFromCart('${product.id}', 'all');displayCart()" class="remove-from-cart"><i class="fa-solid fa-x"></i> Remove</button></td>
                 </tr>
               `
               )
