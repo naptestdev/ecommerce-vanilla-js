@@ -298,9 +298,25 @@
   transform: translateX(0) !important;
 }
 
+.lower-navbar .search {
+  display: none;
+}
+
+.lower-navbar .header {
+  display: none;
+}
+
+#hamburger-btn {
+  display: none;
+}
+
 @media screen and (max-width: 896px) {
   .search {
     display: none;
+  }
+
+  #hamburger-btn {
+    display: unset;
   }
 
   .lower-navbar .search {
@@ -313,7 +329,11 @@
     flex: 1;
   }
 
-  .upper-navbar {
+  .lower-navbar .header {
+    display: flex;
+  }
+
+  .navbar .upper-navbar {
     height: 70px;
   }
 
