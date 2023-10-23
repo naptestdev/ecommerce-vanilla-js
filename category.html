@@ -39,8 +39,26 @@
         </form>
         <div class="icons"></div>
       </div>
-      <div class="lower-navbar">
-        <div>
+      <div
+        class="lower-navbar"
+        onclick="document.querySelector('.lower-navbar').classList.remove('lower-navbar-visible')"
+      >
+        <div onclick="event.stopPropagation()">
+          <div class="header">
+            <h1>Mind<span>X</span> Store</h1>
+            <button
+              onclick="document.querySelector('.lower-navbar').classList.remove('lower-navbar-visible')"
+              id="close-btn"
+            >
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <form class="search" method="get" action="./search.html">
+            <input type="text" placeholder="Search for products.." name="q" />
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
           <div>
             <div class="all-categories" tabindex="0">
               <div>
@@ -52,7 +70,7 @@
               </div>
               <div class="category-drops"></div>
             </div>
-            <div class="drop">
+            <div class="drop" tabindex="0">
               <a href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
               <div class="list">
                 <a class="list-child" href="#">Electronic</a>
@@ -60,7 +78,7 @@
                 <a class="list-child" href="#">Beauty</a>
               </div>
             </div>
-            <div class="drop">
+            <div class="drop" tabindex="0">
               <a href="#">Shop <i class="fa-solid fa-chevron-down"></i></a>
               <div class="list">
                 <a class="list-child" href="#">Shop pages</a>
@@ -68,7 +86,7 @@
                 <a class="list-child" href="#">Hover style</a>
               </div>
             </div>
-            <div class="drop">
+            <div class="drop" tabindex="0">
               <a href="#">Products <i class="fa-solid fa-chevron-down"></i></a>
               <div class="list">
                 <a class="list-child" href="#">Shop Page</a>
@@ -78,7 +96,7 @@
                 <a class="list-child" href="#">With Video</a>
               </div>
             </div>
-            <div class="drop">
+            <div class="drop" tabindex="0">
               <a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
               <div class="list">
                 <a class="list-child" href="#">Blog Standard</a>
@@ -88,7 +106,7 @@
                 <a class="list-child" href="#">Blog Details</a>
               </div>
             </div>
-            <div><a href="./contact.html">Contact</a></div>
+            <div class="hide"><a href="./contact.html">Contact</a></div>
           </div>
           <div class="contact">
             <i class="fa-solid fa-phone" style="color: var(--primary)"></i>

@@ -23,6 +23,9 @@ if (localStorage.getItem("currentUser")) {
         </button>
       </div>
     </div>
+    <a class="navbar-icon" href="#" onclick="document.querySelector('.lower-navbar').classList.add('lower-navbar-visible')">
+      <i class="fa-solid fa-bars"></i>
+    </a>
   `;
 } else {
   document.querySelector(".icons").innerHTML += /*html*/ `
